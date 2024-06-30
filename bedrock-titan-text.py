@@ -24,7 +24,7 @@ llm = BedrockLLM(
 def chatbot(language, question):
     prompt = PromptTemplate(
         input_variables=["language", "freeform_text"],
-        template="You are a knowledgeable assistant. Answer questions based on the information you have. Language: {language}. Question: {9}. Answer:"
+        template="You are a knowledgeable assistant. Answer questions based on the information you have. Language: {language}. Question: {freeform_text}. Answer:"
     )
     
     prompt_text = prompt.format(language=language, freeform_text=question)
